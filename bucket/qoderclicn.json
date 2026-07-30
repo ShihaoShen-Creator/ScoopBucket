@@ -1,0 +1,33 @@
+{
+    "version": "1.1.6",
+    "description": "Qoder CLI - A local file operation tool for efficient file management, data analysis, and content creation.",
+    "homepage": "https://qoder.com.cn",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://static.qoder.com.cn/qoder-cli-cn/releases/1.1.6/qoderclicn-windows-x64.zip",
+            "hash": "715a1a4bf42cd7acdaa46bf879955296d042060f0208181d0f6393400e8b1e14"
+        }
+    },
+    "pre_install": [
+        "$exe = Get-ChildItem \"$dir\\qoderclicn.exe\" -ErrorAction SilentlyContinue",
+        "if (-not $exe) { $exe = Get-ChildItem \"$dir\\*.exe\" | Select-Object -First 1 }",
+        "if ($exe) { Rename-Item $exe.FullName 'qoderclicn.exe' -Force }"
+    ],
+    "bin": "qoderclicn.exe",
+    "checkver": {
+        "url": "https://static.qoder.com.cn/qoder-cli-cn/channels/manifest.json",
+        "jsonpath": "$.latest"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://static.qoder.com.cn/qoder-cli-cn/releases/$version/qoderclicn-windows-x64.zip",
+                "hash": {
+                    "url": "https://static.qoder.com.cn/qoder-cli-cn/channels/manifest.json",
+                    "jsonpath": "$.files[] | select(.os == \"windows\" and .arch == \"amd64\" and .variant == \"standard\") | .sha256"
+                }
+            }
+        }
+    }
+}

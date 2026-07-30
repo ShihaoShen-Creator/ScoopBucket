@@ -1,0 +1,45 @@
+{
+    "version": "2026.07.23-e383d2b",
+    "description": "Cursor CLI - run Cursor agents from the terminal",
+    "homepage": "https://cursor.com/cli",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://cursor.com/terms-of-service"
+    },
+    "notes": [
+        "Available commands: agent, cursor-agent.",
+        "Update with 'scoop update cursor-cli'. Do not use 'agent update', as it conflicts with the Scoop layout."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.cursor.com/lab/2026.07.23-e383d2b/windows/x64/agent-cli-package.zip",
+            "hash": "96c7b739eaf2fc68869341f2e0781ccbefd631a7493d373728bf14141749035f"
+        },
+        "arm64": {
+            "url": "https://downloads.cursor.com/lab/2026.07.23-e383d2b/windows/arm64/agent-cli-package.zip",
+            "hash": "1d94e23b6901c3ab3092ed4094d77843d7a4978df24a873cc8c6421026f5efdc"
+        }
+    },
+    "extract_dir": "dist-package",
+    "bin": [
+        "cursor-agent.cmd",
+        [
+            "cursor-agent.cmd",
+            "agent"
+        ]
+    ],
+    "checkver": {
+        "url": "https://cursor.com/install?win32=true",
+        "regex": "\\$version = '([^']+)'"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.cursor.com/lab/$version/windows/x64/agent-cli-package.zip"
+            },
+            "arm64": {
+                "url": "https://downloads.cursor.com/lab/$version/windows/arm64/agent-cli-package.zip"
+            }
+        }
+    }
+}
