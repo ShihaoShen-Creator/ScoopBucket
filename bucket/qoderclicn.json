@@ -1,12 +1,12 @@
 {
-    "version": "1.1.22",
+    "version": "1.1.23",
     "description": "Qoder CLI - A local file operation tool for efficient file management, data analysis, and content creation.",
     "homepage": "https://qoder.com.cn",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://static.qoder.com.cn/qoder-cli-cn/releases/1.1.22/qoderclicn-windows-x64.zip",
-            "hash": "89c734f38bcbd76e881d859acee81c13e2b1f462d3b6c83df26f29580bcfc33f"
+            "url": "https://static.qoder.com.cn/qoder-cli-cn/releases/1.1.23/qoderclicn-windows-x64.zip",
+            "hash": "db86e469a56f20471df55c9a23e1b7b08fd4ede2a65828561a8333ea8379988a"
         }
     },
     "pre_install": [
