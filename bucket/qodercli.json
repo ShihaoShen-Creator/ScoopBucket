@@ -1,12 +1,12 @@
 {
-    "version": "1.1.41",
+    "version": "1.1.42",
     "description": "Qoder CLI - A powerful command-line interface for Qoder AI services.",
     "homepage": "https://qoder.com",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://qoder-ide.oss-accelerate.aliyuncs.com/qodercli/releases/1.1.41/qodercli-windows-x64-legacy.zip",
-            "hash": "20d362f61d1ffc1bbfc141c849a1b731780ce4ba898d19f62a23f8d7be4212e2"
+            "url": "https://qoder-ide.oss-accelerate.aliyuncs.com/qodercli/releases/1.1.42/qodercli-windows-x64-legacy.zip",
+            "hash": "91de7f2a099a3b7e3e192646cf50cd46fd1aeca4e7445d3cd2310e4c878e5fb3"
         }
     },
     "bin": "qodercli.exe",
