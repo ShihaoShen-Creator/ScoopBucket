@@ -28,6 +28,12 @@ scoop bucket add shihao https://github.com/ShihaoShen-Creator/ScoopBucket
 scoop install shihao/<manifestname> # e.g. shihao/vscode-exploration
 ```
 
+## Manage Package with [ScoopBrew](https://github.com/ShihaoShen-Creator/ScoopBrew)
+
+```
+scoop install shihao/scoopbrew
+```
+
 ## How do I contribute new manifests?
 
 To make a new manifest contribution, please read the [Contributing Guide](https://github.com/ScoopInstaller/.github/blob/main/.github/CONTRIBUTING.md)
